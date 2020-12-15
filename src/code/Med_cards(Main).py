@@ -114,7 +114,6 @@ class HealthCard(QMainWindow, Ui_MainWindow):  # Главное окно поч�
         self.ill_btn.clicked.connect(self.card_ill)
         self.trt_btn.clicked.connect(self.card_trt)
         self.db = 'id'
-        self.mem = 0
         self.card_show()
         self.info = []
         self.Trt = Treatment_class.TreatmentCard()

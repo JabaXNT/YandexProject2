@@ -16,7 +16,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc95510f-dabf-472e-9835-ecc22a82c420" name="Default Changelist" comment="пуп" />
+    <list default="true" id="cc95510f-dabf-472e-9835-ecc22a82c420" name="Default Changelist" comment="сложно">
+      <change beforePath="$PROJECT_DIR$/src/code/Med_cards(Main).py" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Med_cards(Main).py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,15 +113,15 @@
       <method v="2" />
     </configuration>
     <configuration name="Med_cards(Main)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Медицинские карты проект яндекс" />
+      <module name="Гит" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\Ilja\AppData\Local\Programs\Python\Python38-32\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/code" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/code/Med_cards(Main).py" />
@@ -269,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608026114179</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="сложно">
+      <created>1608026430933</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1608026430933</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -307,7 +316,8 @@
     <MESSAGE value="Добавил изменения без открытия отдельного окна" />
     <MESSAGE value="Финальный пуш" />
     <MESSAGE value="пуп" />
-    <option name="LAST_COMMIT_MESSAGE" value="пуп" />
+    <MESSAGE value="сложно" />
+    <option name="LAST_COMMIT_MESSAGE" value="сложно" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607231848247">
