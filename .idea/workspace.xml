@@ -17,7 +17,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc95510f-dabf-472e-9835-ecc22a82c420" name="Default Changelist" comment="сложно">
-      <change beforePath="$PROJECT_DIR$/src/code/Med_cards(Main).py" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Med_cards(Main).py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/code/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/programm/build/Med_cards(Main)/Analysis-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/programm/build/Med_cards(Main)/EXE-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/programm/build/Med_cards(Main)/Med_cards(Main).exe.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/programm/build/Med_cards(Main)/PKG-00.pkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/programm/build/Med_cards(Main)/PKG-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/programm/build/Med_cards(Main)/PYZ-00.pyz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/programm/build/Med_cards(Main)/PYZ-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/programm/build/Med_cards(Main)/Tree-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/programm/build/Med_cards(Main)/Tree-01.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/programm/build/Med_cards(Main)/Tree-02.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/programm/build/Med_cards(Main)/base_library.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/programm/build/Med_cards(Main)/warn-Med_cards(Main).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/programm/build/Med_cards(Main)/xref-Med_cards(Main).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/programm/dist/Health_cards.sqlite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/programm/dist/Med_cards(Main).exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/Health_cards.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Health_cards.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/Illness_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Illness_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/Med_cards(Main).py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/Treatment_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Treatment_class.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,20 +68,20 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager" selected="Python.Med_cards(Main)">
-    <configuration name="Illness_class" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Медицинские карты проект яндекс" />
+  <component name="RunManager" selected="Python.Main">
+    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Гит" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/code" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Illness_class.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Ilja\Desktop\Гит\src\code\Main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -160,7 +180,6 @@
         <item itemvalue="Python.Treatment_class (1)" />
         <item itemvalue="Python.Med_cards(Main) (1)" />
         <item itemvalue="Python.Med_cards(Main) (2)" />
-        <item itemvalue="Python.Illness_class" />
       </list>
     </recent_temporary>
   </component>
@@ -278,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608026430933</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="сложно">
+      <created>1608026614807</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1608026614807</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -324,26 +350,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607231848247" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1608026080527">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1608032480342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1608026080527" />
-    <state width="1899" height="165" key="GridCell.Tab.0.bottom" timestamp="1608026141222">
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1608032480342" />
+    <state width="1899" height="165" key="GridCell.Tab.0.bottom" timestamp="1608032482341">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="165" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608026141222" />
-    <state width="1899" height="165" key="GridCell.Tab.0.center" timestamp="1608026141221">
+    <state width="1899" height="165" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608032482341" />
+    <state width="1899" height="165" key="GridCell.Tab.0.center" timestamp="1608032482341">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="165" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608026141221" />
-    <state width="1899" height="165" key="GridCell.Tab.0.left" timestamp="1608026141221">
+    <state width="1899" height="165" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608032482341" />
+    <state width="1899" height="165" key="GridCell.Tab.0.left" timestamp="1608032482341">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="165" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608026141221" />
-    <state width="1899" height="165" key="GridCell.Tab.0.right" timestamp="1608026141222">
+    <state width="1899" height="165" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608032482341" />
+    <state width="1899" height="165" key="GridCell.Tab.0.right" timestamp="1608032482341">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="165" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608026141222" />
+    <state width="1899" height="165" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608032482341" />
     <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1607685210181">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -364,14 +390,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1608025635009" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1608026246439">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1608026618906">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608026246439" />
-    <state x="761" y="426" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1608026207085">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608026618906" />
+    <state x="761" y="426" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1608026499174">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="761" y="426" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608026207085" />
+    <state x="761" y="426" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608026499174" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607752512516">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

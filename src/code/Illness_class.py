@@ -1,12 +1,12 @@
+from PyQt5.QtWidgets import QApplication, QTableWidget, QDialog, QWidget, QMenu, QTableWidgetItem, QMessageBox
+from PyQt5 import QtCore, QtGui
+
 import sqlite3
 import sys
 import lang
-
 from src.design.illness import Ui_Form_1
 from src.design.add_ill import Ui_Dialog_3
 from src.design.changeill_card import Ui_Dialog
-from PyQt5.QtWidgets import QApplication, QTableWidget, QDialog, QWidget, QMenu, QTableWidgetItem, QMessageBox
-from PyQt5 import QtCore, QtGui
 
 
 class ChangeIll(QDialog, Ui_Dialog):
@@ -22,16 +22,16 @@ class ChangeIll(QDialog, Ui_Dialog):
         self.diag_id.setText(self.main.id_numb[0])
 
     def save(self):
-        self.main.diagIll_new = ''.join(self.diag_new.text().strip())
-        self.main.diagID_new = ''.join(self.diag_id.text().strip())
-        if self.main.diagIll_new == '':
+        self.main.dialogIll_new = ''.join(self.diag_new.text().strip())
+        self.main.dialogID_new = ''.join(self.diag_id.text().strip())
+        if self.main.dialogIll_new == '':
             self.label.setText(lang.diag_input)
             return
-        if self.main.diagID_new == '':
+        if self.main.dialogID_new == '':
             self.label.setText(lang.id_input)
             return
-        variableill = [self.main.diagID_new, self.main.diagIll_new, self.main.illres[0][0]]
-        self.res.execute("UPDATE Illness SET name_id = ?, illness = ? WHERE id = ?", variableill)
+        variables = [self.main.dialogID_new, self.main.dialogIll_new, self.main.illres[0][0]]
+        self.res.execute("UPDATE Illness SET name_id = ?, illness = ? WHERE id = ?", variables)
         self.label.setText('')
         self.connection.commit()
         self.connection.close()
@@ -52,11 +52,11 @@ class AddIll(QDialog, Ui_Dialog_3):  # Добавление диагноза в 
     def save_ill(self):
         self.flag = True
         self.main.idIll = ''.join(self.id.text().strip())
-        self.main.diagIll = ''.join(self.diag.text().strip())
+        self.main.dialogIll = ''.join(self.diag.text().strip())
         if self.main.idIll == '':
             self.label.setText(lang.id_input)
             return
-        if self.main.diagIll == '':
+        if self.main.dialogIll == '':
             self.label.setText(lang.diag_input)
             return
         result = self.res.execute("SELECT id FROM Patients").fetchall()
@@ -70,8 +70,8 @@ class AddIll(QDialog, Ui_Dialog_3):  # Добавление диагноза в 
         if self.flag:
             self.label.setText(lang.noid_input)
             return
-        variableill = [self.main.idIll, self.main.diagIll]
-        self.res.execute("INSERT INTO Illness(name_id, illness) VALUES(?, ?)", variableill)
+        variables = [self.main.idIll, self.main.dialogIll]
+        self.res.execute("INSERT INTO Illness(name_id, illness) VALUES(?, ?)", variables)
         self.label.setText('')
         self.connection.commit()
         self.connection.close()
@@ -85,17 +85,22 @@ class IllnessCard(QWidget, Ui_Form_1):  # БД с болезнями пацие�
         self.setWindowTitle('История болезни')
         self.connection = sqlite3.connect('Health_cards.sqlite')
         self.res = self.connection.cursor()
-        menuill = QMenu()
-        menuill.addAction('ID', self.action1)
-        menuill.addAction('Болезнь', self.action2)
-        self.chsill_btn.setMenu(menuill)
+        menu = QMenu()
+        menu.addAction('ID', self.action1)
+        menu.addAction('Болезнь', self.action2)
+        self.chsill_btn.setMenu(menu)
         self.chngill_btn.clicked.connect(self.ill_change)
         self.addill_btn.clicked.connect(self.ill_add)
         self.srchill_btn.clicked.connect(self.ill_search)
         self.showill_btn.clicked.connect(self.ill_show)
         self.delill_btn.clicked.connect(self.ill_delete)
-        self.bruh = []
+        self.lest = []
+        self.infill = []
+        self.row_numb = []
+        self.id_numb = []
         self.db = 'name_id'
+        self.ill_add = 0
+        self.change_card = 0
         self.ill_show()
 
     def action1(self):
@@ -113,20 +118,20 @@ class IllnessCard(QWidget, Ui_Form_1):  # БД с болезнями пацие�
     def ill_change(self):
         self.row_numb = list(set([i.row() for i in self.ill_table.selectedItems()]))
         self.id_numb = [self.ill_table.item(i, 0).text() for i in self.row_numb]
-        self.infoill = [self.ill_table.item(i, 1).text() for i in self.row_numb]
+        self.infill = [self.ill_table.item(i, 1).text() for i in self.row_numb]
         try:
-            self.bruh = self.id_numb[0], self.infoill[0]
+            self.lest = self.id_numb[0], self.infill[0]
         except IndexError:
             self.label_msg.setText(lang.takecard)
             return
-        self.illres = self.res.execute("SELECT id FROM Illness WHERE name_id = ? AND illness = ?",
-                                       self.bruh).fetchall()
+        self.illness = self.res.execute("SELECT id FROM Illness WHERE name_id = ? AND illness = ?",
+                                        self.bruh).fetchall()
         if len(self.id_numb) == 0:
             self.label_msg.setText(lang.takecard)
             return
-        self.changeill_card = ChangeIll(self)
+        self.change_card = ChangeIll(self)
         self.label_msg.setText('')
-        self.changeill_card.show()
+        self.change_card.show()
 
     def ill_delete(self):
         rows = list(set([i.row() for i in self.ill_table.selectedItems()]))
@@ -142,8 +147,7 @@ class IllnessCard(QWidget, Ui_Form_1):  # БД с болезнями пацие�
         use = self.res.execute("SELECT id FROM Illness WHERE name_id = ? AND illness = ?", result).fetchall()
         if len(ids) > 0:
             sure = QMessageBox.question(
-                self, '', "Действительно удалить карту?"
-                , QMessageBox.Yes, QMessageBox.No)
+                self, '', "Действительно удалить карту?", QMessageBox.Yes, QMessageBox.No)
             if sure == QMessageBox.Yes:
                 self.res.execute("DELETE FROM Illness WHERE id = ?", use[0])
                 self.label_msg.setText('')

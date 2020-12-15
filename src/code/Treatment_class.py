@@ -1,12 +1,12 @@
+from PyQt5.QtWidgets import QApplication, QTableWidget, QDialog, QWidget, QMenu, QTableWidgetItem, QMessageBox
+from PyQt5 import QtCore, QtGui
+
 import sqlite3
 import sys
 import lang
-
 from src.design.treatment import Ui_Form_2
 from src.design.add_trt import Ui_Dialog_4
 from src.design.changetrt_card import Ui_Dialog
-from PyQt5.QtWidgets import QApplication, QTableWidget, QDialog, QWidget, QMenu, QTableWidgetItem, QMessageBox
-from PyQt5 import QtCore, QtGui
 
 
 class ChangeTrt(QDialog, Ui_Dialog):
@@ -30,8 +30,8 @@ class ChangeTrt(QDialog, Ui_Dialog):
         if self.main.cureID_new == '':
             self.label.setText(lang.id_input)
             return
-        variabletrt = [self.main.cureID_new, self.main.cureTrt_new, self.main.trtres[0][0]]
-        self.res.execute("UPDATE Treat SET name_id = ?, medication = ? WHERE id = ?", variabletrt)
+        variables = [self.main.cureID_new, self.main.cureTrt_new, self.main.trtres[0][0]]
+        self.res.execute("UPDATE Treat SET name_id = ?, medication = ? WHERE id = ?", variables)
         self.label.setText('')
         self.connection.commit()
         self.connection.close()
@@ -85,16 +85,21 @@ class TreatmentCard(QWidget, Ui_Form_2):  # История лечения пац
         self.setWindowTitle('Лечение')
         self.connection = sqlite3.connect('Health_cards.sqlite')
         self.res = self.connection.cursor()
-        menutrt = QMenu()
-        menutrt.addAction('ID', self.action1)
-        menutrt.addAction('Лекарство', self.action2)
-        self.chstrt_btn.setMenu(menutrt)
+        menu = QMenu()
+        menu.addAction('ID', self.action1)
+        menu.addAction('Лекарство', self.action2)
+        self.chstrt_btn.setMenu(menu)
         self.deltrt_btn.clicked.connect(self.trt_delete)
         self.chngtrt_btn.clicked.connect(self.trt_change)
         self.srchtrt_btn.clicked.connect(self.trt_search)
         self.showtrt_btn.clicked.connect(self.trt_show)
         self.addtrt_btn.clicked.connect(self.trt_add)
-        self.bruh = []
+        self.lest = []
+        self.row_numb = []
+        self.informant = []
+        self.trt_add = 0
+        self.change_card = 0
+        self.id_numb = []
         self.db = 'name_id'
         self.trt_show()
 
@@ -113,20 +118,20 @@ class TreatmentCard(QWidget, Ui_Form_2):  # История лечения пац
     def trt_change(self):
         self.row_numb = list(set([i.row() for i in self.trt_table.selectedItems()]))
         self.id_numb = [self.trt_table.item(i, 0).text() for i in self.row_numb]
-        self.infotrt = [self.trt_table.item(i, 1).text() for i in self.row_numb]
+        self.treatment = [self.trt_table.item(i, 1).text() for i in self.row_numb]
         try:
-            self.bruh = self.id_numb[0], self.infotrt[0]
+            self.lest = self.id_numb[0], self.infotrt[0]
         except IndexError:
             self.label_msg.setText(lang.takecard)
             return
-        self.trtres = self.res.execute("SELECT id FROM Treat WHERE name_id = ? AND medication = ?",
-                                       self.bruh).fetchall()
+        self.treatments = self.res.execute("SELECT id FROM Treat WHERE name_id = ? AND medication = ?",
+                                           self.bruh).fetchall()
         if len(self.id_numb) == 0:
             self.label_msg.setText(lang.takecard)
             return
-        self.changetrt_card = ChangeTrt(self)
+        self.change_card = ChangeTrt(self)
         self.label_msg.setText('')
-        self.changetrt_card.show()
+        self.change_card.show()
 
     def trt_delete(self):
         rows = list(set([i.row() for i in self.trt_table.selectedItems()]))
@@ -142,8 +147,7 @@ class TreatmentCard(QWidget, Ui_Form_2):  # История лечения пац
         use = self.res.execute("SELECT id FROM Treat WHERE name_id = ? AND medication = ?", result).fetchall()
         if len(ids) > 0:
             sure = QMessageBox.question(
-                self, '', "Действительно удалить карту?"
-                , QMessageBox.Yes, QMessageBox.No)
+                self, '', "Действительно удалить карту?", QMessageBox.Yes, QMessageBox.No)
             if sure == QMessageBox.Yes:
                 self.res.execute("DELETE FROM Treat WHERE id = ?", use[0])
                 self.label_msg.setText('')
