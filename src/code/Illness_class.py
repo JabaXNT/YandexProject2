@@ -18,7 +18,7 @@ class ChangeIll(QDialog, Ui_Dialog):
         self.connection = sqlite3.connect('Health_cards.sqlite')
         self.res = self.connection.cursor()
         self.saveIll_btn.clicked.connect(self.save)
-        self.diag_new.setText(self.main.infoill[0])
+        self.diag_new.setText(self.main.infill[0])
         self.diag_id.setText(self.main.id_numb[0])
 
     def save(self):
@@ -30,7 +30,8 @@ class ChangeIll(QDialog, Ui_Dialog):
         if self.main.dialogID_new == '':
             self.label.setText(lang.id_input)
             return
-        variables = [self.main.dialogID_new, self.main.dialogIll_new, self.main.illres[0][0]]
+        print(self.main.illness[0][0])
+        variables = [self.main.dialogID_new, self.main.dialogIll_new, self.main.illness[0][0]]
         self.res.execute("UPDATE Illness SET name_id = ?, illness = ? WHERE id = ?", variables)
         self.label.setText('')
         self.connection.commit()
@@ -125,7 +126,7 @@ class IllnessCard(QWidget, Ui_Form_1):  # БД с болезнями пацие�
             self.label_msg.setText(lang.takecard)
             return
         self.illness = self.res.execute("SELECT id FROM Illness WHERE name_id = ? AND illness = ?",
-                                        self.bruh).fetchall()
+                                        self.lest).fetchall()
         if len(self.id_numb) == 0:
             self.label_msg.setText(lang.takecard)
             return

@@ -18,7 +18,7 @@ class ChangeTrt(QDialog, Ui_Dialog):
         self.connection = sqlite3.connect('Health_cards.sqlite')
         self.res = self.connection.cursor()
         self.saveTrt_btn.clicked.connect(self.save)
-        self.cure_new.setText(self.main.infotrt[0])
+        self.cure_new.setText(self.main.treatment[0])
         self.cure_id.setText(self.main.id_numb[0])
 
     def save(self):
@@ -30,7 +30,7 @@ class ChangeTrt(QDialog, Ui_Dialog):
         if self.main.cureID_new == '':
             self.label.setText(lang.id_input)
             return
-        variables = [self.main.cureID_new, self.main.cureTrt_new, self.main.trtres[0][0]]
+        variables = [self.main.cureID_new, self.main.cureTrt_new, self.main.treatments[0][0]]
         self.res.execute("UPDATE Treat SET name_id = ?, medication = ? WHERE id = ?", variables)
         self.label.setText('')
         self.connection.commit()
@@ -120,12 +120,12 @@ class TreatmentCard(QWidget, Ui_Form_2):  # История лечения пац
         self.id_numb = [self.trt_table.item(i, 0).text() for i in self.row_numb]
         self.treatment = [self.trt_table.item(i, 1).text() for i in self.row_numb]
         try:
-            self.lest = self.id_numb[0], self.infotrt[0]
+            self.lest = self.id_numb[0], self.treatment[0]
         except IndexError:
             self.label_msg.setText(lang.takecard)
             return
         self.treatments = self.res.execute("SELECT id FROM Treat WHERE name_id = ? AND medication = ?",
-                                           self.bruh).fetchall()
+                                           self.lest).fetchall()
         if len(self.id_numb) == 0:
             self.label_msg.setText(lang.takecard)
             return
