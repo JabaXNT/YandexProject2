@@ -16,7 +16,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc95510f-dabf-472e-9835-ecc22a82c420" name="Default Changelist" comment="лень исправлять название переменных на snake case в файлах с дизайном" />
+    <list default="true" id="cc95510f-dabf-472e-9835-ecc22a82c420" name="Default Changelist" comment="лень исправлять название переменных на snake case в файлах с дизайном">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/Health_cards.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Health_cards.sqlite" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,8 +49,8 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager" selected="Python.Main">
-    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.Main (1)">
+    <configuration name="Main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Гит" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -59,7 +62,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Ilja\Desktop\Гит\src\code\Main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/code/Main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -154,6 +157,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Main (1)" />
         <item itemvalue="Python.Med_cards(Main)" />
         <item itemvalue="Python.Treatment_class (1)" />
         <item itemvalue="Python.Med_cards(Main) (1)" />
@@ -289,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608032872173</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="ы">
+      <created>1608033291160</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1608033291160</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -329,7 +340,8 @@
     <MESSAGE value="пуп" />
     <MESSAGE value="сложно" />
     <MESSAGE value="лень исправлять название переменных на snake case в файлах с дизайном" />
-    <option name="LAST_COMMIT_MESSAGE" value="лень исправлять название переменных на snake case в файлах с дизайном" />
+    <MESSAGE value="ы" />
+    <option name="LAST_COMMIT_MESSAGE" value="ы" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607231848247">
@@ -340,22 +352,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1608032480342" />
-    <state width="1899" height="165" key="GridCell.Tab.0.bottom" timestamp="1608032482341">
+    <state width="1899" height="165" key="GridCell.Tab.0.bottom" timestamp="1608887697452">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="165" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608032482341" />
-    <state width="1899" height="165" key="GridCell.Tab.0.center" timestamp="1608032482341">
+    <state width="1899" height="165" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608887697452" />
+    <state width="1899" height="165" key="GridCell.Tab.0.center" timestamp="1608887697452">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="165" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608032482341" />
-    <state width="1899" height="165" key="GridCell.Tab.0.left" timestamp="1608032482341">
+    <state width="1899" height="165" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608887697452" />
+    <state width="1899" height="165" key="GridCell.Tab.0.left" timestamp="1608887697452">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="165" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608032482341" />
-    <state width="1899" height="165" key="GridCell.Tab.0.right" timestamp="1608032482341">
+    <state width="1899" height="165" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608887697452" />
+    <state width="1899" height="165" key="GridCell.Tab.0.right" timestamp="1608887697452">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="165" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608032482341" />
+    <state width="1899" height="165" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608887697452" />
     <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1607685210181">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -376,10 +388,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1608025635009" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1608026618906">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1608033307080">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608026618906" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608033307080" />
     <state x="761" y="426" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1608026499174">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
